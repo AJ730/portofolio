@@ -3,76 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            margin: 0;
-            padding: 0;
-        }
-        header {
-            background-color: #333;
-            color: #fff;
-            padding: 1rem 0;
-            text-align: center;
-        }
-        .container {
-            width: 80%;
-            margin: 2rem auto;
-        }
-        .project {
-            background-color: #fff;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            padding: 1rem;
-            margin-bottom: 1rem;
-        }
-        .project h2 {
-            margin-top: 0;
-        }
-        .project p {
-            margin: 0.5rem 0;
-        }
-        footer {
-            text-align: center;
-            padding: 1rem 0;
-            background-color: #333;
-            color: #fff;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
-        }
-    </style>
+    <title>My Portfolio Blog</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1>Welcome to My Portfolio</h1>
-        <p>Here are some of my projects on GitHub</p>
+        <h1>Welcome to My Portfolio Blog</h1>
     </header>
-    <div class="container" id="projects"></div>
+    <nav>
+        <ul>
+            <li><a href="index.html">About Me</a></li>
+            <li><a href="projects.html">Projects</a></li>
+        </ul>
+    </nav>
+    <section id="about" class="container">
+        <h2>About Me</h2>
+        <p>Hi, I'm Akash Amalan, a passionate and driven AI Engineer with a solid foundation in machine learning, deep learning, and data science. I have a proven track record of effectively engaging with stakeholders, communicating ideas, and driving innovation. I am skilled at identifying opportunities for leveraging technology to solve complex business problems and known for delivering technology solutions that enhance efficiency and impact. Currently, I am seeking a role as an AI Engineer to apply my analytical skills and drive data-driven decision-making, contributing to business success and innovation.</p>
+        <h3>Areas of Expertise</h3>
+        <ul>
+            <li>Federated Learning</li>
+            <li>Generative Adversarial Networks (GANs)</li>
+            <li>Artificial Intelligence</li>
+            <li>Process Automation</li>
+            <li>Natural Language Processing</li>
+            <li>Computer Vision</li>
+            <li>Azure Cloud Services</li>
+            <li>Finetuning LLMs</li>
+            <li>GIT</li>
+            <li>PyTorch</li>
+            <li>TensorFlow</li>
+        </ul>
+        <h3>Education</h3>
+        <p>Master of Science (Artificial Intelligence), Delft University of Technology, Delft, NL (2022 - 2024)</p>
+        <p>Master of Science (Cybersecurity), Delft University of Technology, Delft, NL (2022 - 2024)</p>
+        <p>Bachelor of Science (Computer Science - AI Track), Delft University of Technology, Delft, NL (2019 - 2022)</p>
+    </section>
     <footer>
-        &copy; 2024 Your Name. All Rights Reserved.
+        &copy; 2024 Akash Amalan. All Rights Reserved.
     </footer>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            fetch('https://api.github.com/users/YOUR_GITHUB_USERNAME/repos')
-                .then(response => response.json())
-                .then(data => {
-                    const projectsContainer = document.getElementById('projects');
-                    data.forEach(repo => {
-                        const projectDiv = document.createElement('div');
-                        projectDiv.classList.add('project');
-                        projectDiv.innerHTML = `
-                            <h2>${repo.name}</h2>
-                            <p>${repo.description ? repo.description : 'No description available.'}</p>
-                            <p><a href="${repo.html_url}" target="_blank">View on GitHub</a></p>
-                        `;
-                        projectsContainer.appendChild(projectDiv);
-                    });
-                })
-                .catch(error => console.error('Error fetching repos:', error));
-        });
-    </script>
 </body>
 </html>
