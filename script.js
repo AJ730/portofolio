@@ -87,9 +87,22 @@ document.addEventListener('DOMContentLoaded', async function() {
         },
         {
             name: 'Aimbot Development: A computer vision perspective',
-            description: 'XSStrikeMod is an updated fork of XSStrike. XSStrike is a Cross Site Scripting detection suite equipped with four hand written parsers, an intelligent payload generator, a powerful fuzzing engine and an incredibly fast crawler.',
+            description: 'Developed an aimbot using computer vision with Yolo and GroundingDino',
             url: 'https://github.com/BowMonk/valoCV'
         },
+
+        {
+            name: 'Smart Object detection and tracking',
+            description: 'implemented a real-time object detection and tracking system using YOLOv8, OpenCV, and MSS for screen capture. The system captures the screen, detects objects within a defined region of interest (ROI), and tracks selected objects.',
+            url: 'https://github.com/AJ730/RealTimeDetection-Tracking'
+        },
+        {
+            name: 'Music Generation Rnn',
+            description: 'Implemented a music generation model using Long Short-Term Memory (LSTM) networks in PyTorch. The model is trained on MIDI data from the MAESTRO dataset to predict sequences of musical notes, including pitch, step, and duration.',
+            url: 'https://github.com/AJ730/MusinGenerationRnn'
+        },
+
+        
 
     ];
 
